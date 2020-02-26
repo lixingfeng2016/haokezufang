@@ -19,7 +19,7 @@ class Home extends React.Component {
     };
 
     // 判断url，如果是/home则让它重定向/home/index
-    console.log(this.props);
+    // console.log(this.props);
     if(this.props.match.path==='/home'){
         this.props.history.push('/home/index')
     }

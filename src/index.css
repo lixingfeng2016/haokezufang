@@ -1,0 +1,13 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+    vertical-align: middle;
+}
+body{
+    font-size: 14rpx;
+    color: #666;
+}

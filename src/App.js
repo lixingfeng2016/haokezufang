@@ -3,9 +3,15 @@ import { Route, HashRouter as Router, Switch, Redirect } from "react-router-dom"
 
 import Home from './pages/home'
 import Mapcity from './pages/mapcity'
+import {localcityaction} from './store/actioncreator'
+import{connect} from 'react-redux'
 
 class App extends Component {
+  componentDidMount(){
+   this.props.handleinitcity()
+  }
   render() {
+    
     return (
       <Fragment>
         <div>
@@ -27,4 +33,13 @@ class App extends Component {
     );
   }
 }
-export default App;
+
+
+const mapsetcity=(dispatch)=>{
+    return{
+      handleinitcity(){
+          dispatch(localcityaction())
+      }
+    }
+}
+export default connect(null,mapsetcity)(App) ;
